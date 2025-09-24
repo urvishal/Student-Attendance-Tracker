@@ -1,0 +1,42 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.post-content {
+  white-space: pre-line;
+}
+
+.comment-section {
+  background-color: #f8f9fa;
+  border-radius: 0.375rem;
+  padding: 1rem;
+}
