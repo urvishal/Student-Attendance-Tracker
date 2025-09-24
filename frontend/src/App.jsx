@@ -9,6 +9,8 @@ import Posts from "./pages/Posts";
 import PostDetail from "./pages/PostDetail";
 import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
+import Classes from "./pages/Classes";
+import ClassDetail from "./pages/ClassDetail";
 import LoadingSpinner from "./components/LoadingSpinner";
 import { useAuth } from "./context/AuthContext";
 
@@ -29,7 +31,16 @@ const AppContent = () => {
       <Route path="/posts/:id" element={<PostDetail />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/admin" element={<Admin />} />
-      <Route path="*" element={<div>Page not found</div>} />
+      <Route path="/classes" element={<Classes />} />
+      <Route path="/classes/:id" element={<ClassDetail />} />
+      <Route
+        path="*"
+        element={
+          <div className="container mt-4">
+            <h2>Page Not Found</h2>
+          </div>
+        }
+      />
     </Routes>
   );
 };

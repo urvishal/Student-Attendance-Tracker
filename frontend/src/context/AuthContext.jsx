@@ -31,7 +31,8 @@ export const AuthProvider = ({ children }) => {
       setUser(userData);
     } catch (error) {
       console.error("Error getting profile:", error);
-      logout();
+      localStorage.removeItem("token");
+      authAPI.setToken(null);
     } finally {
       setLoading(false);
     }

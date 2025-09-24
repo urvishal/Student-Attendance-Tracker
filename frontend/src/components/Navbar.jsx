@@ -31,8 +31,15 @@ const AppNavbar = () => {
               Posts
             </Nav.Link>
 
+            <Nav.Link as={Link} to="/classes">
+              Classes
+            </Nav.Link>
+
             {isEditor(user) && (
-              <Nav.Link as={Link} to="/posts/create">
+              <Nav.Link
+                as={Link}
+                to="/posts/create"
+                style={{ pointerEvents: "none", opacity: 0.6 }}>
                 Create Post
               </Nav.Link>
             )}

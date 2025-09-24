@@ -2,14 +2,18 @@
 export const formatDate = (dateString) => {
   if (!dateString) return "Unknown date";
 
-  const options = {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  };
-  return new Date(dateString).toLocaleDateString(undefined, options);
+  try {
+    const options = {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  } catch (error) {
+    return "Invalid date";
+  }
 };
 
 // Check if user has admin role
